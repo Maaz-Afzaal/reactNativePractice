@@ -8,10 +8,16 @@
 
 import React from 'react';
 import {Text, View} from 'react-native';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+
 import Routes from './Routes';
 
 const App = () => {
-  return <Routes />;
+  return (
+    <SafeAreaProvider>
+      <Routes />
+    </SafeAreaProvider>
+  );
 };
 
 export default App;
